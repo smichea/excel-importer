@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Spreadsheet Importer</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/meveo-org/mv-theme@master/css/meveo-theme.css" /> 
+    <script src="https://unpkg.com/read-excel-file@4.x/bundle/read-excel-file.min.js"></script>
+    <script defer
+    src="https://cdn.jsdelivr.net/gh/meveo-org/mv-dependencies@master/es-module-shims/es-module-shims.min.js"></script>
+  <script type="importmap-shim">
+    {
+      "imports": {
+        "lit-element": "https://cdn.jsdelivr.net/gh/meveo-org/mv-dependencies@master/lit-element.js",
+        "mv-main": "https://cdn.jsdelivr.net/gh/meveo-org/mv-main@master/mv-main.js",
+        "mv-container": "https://cdn.jsdelivr.net/gh/meveo-org/mv-container@master/mv-container.js",
+        "mv-font-awesome": "https://cdn.jsdelivr.net/gh/meveo-org/mv-font-awesome@master/mv-font-awesome.js",
+        "mv-footer": "https://cdn.jsdelivr.net/gh/meveo-org/mv-footer@master/mv-footer.js",
+        "mv-header": "https://cdn.jsdelivr.net/gh/meveo-org/mv-header@master/mv-header.js",
+        "mv-menu-panel": "https://cdn.jsdelivr.net/gh/meveo-org/mv-menu-panel@master/mv-menu-panel.js",
+        "mv-table": "https://cdn.jsdelivr.net/gh/meveo-org/mv-table@master/mv-table.js",
+        "mv-tooltip": "https://cdn.jsdelivr.net/gh/meveo-org/mv-tooltip@master/mv-tooltip.js",
+        "mv-checkbox": "https://cdn.jsdelivr.net/gh/meveo-org/mv-checkbox@master/mv-checkbox.js",
+        "mv-click-away": "https://cdn.jsdelivr.net/gh/meveo-org/mv-click-away@master/mv-click-away.js",
+        "mv-select": "https://cdn.jsdelivr.net/gh/meveo-org/mv-select@master/mv-select.js",
+        "mv-input": "https://cdn.jsdelivr.net/gh/meveo-org/mv-input@master/mv-input.js"
+      }
+    }
+  </script>
+</head>
+<body>
+    <div id="wd-testsuite-container"></div>
+    <wd-excel-manager id="wd-excel-manager"></wd-excel-manager>
+    <script src="./wd-excel-manager.js"  type="module-shim"></script>
+    <script>
+      let wdExcelManager=document.getElementById("wd-excel-manager");
+      function setWdTestSuite(suite){
+        wdExcelManager.setTestSuite(suite);
+      }
+    </script>
+</body>
+</html>
